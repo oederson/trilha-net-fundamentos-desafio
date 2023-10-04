@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace DesafioFundamentos.Models
 {
     public class Estacionamento
@@ -16,18 +18,27 @@ namespace DesafioFundamentos.Models
         {
             // TODO: Pedir para o usuário digitar uma placa (ReadLine) e adicionar na lista "veiculos"
             // *IMPLEMENTE AQUI*
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Para a placa ser válida deve conter 3 letras e 3 números, ex: ABC1234");
+            Console.ResetColor();
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             string placa = Console.ReadLine(); // Lê a placa digitada pelo usuário
-            if(veiculos.Contains(placa))
+            bool placaAprovada = ValidarPlaca(placa) && !veiculos.Contains(placa);
+            if(placaAprovada)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Veiculo já cadastrado!");
-                Console.ResetColor();
+                veiculos.Add(placa);
             }     
             else
             {      
-            veiculos.Add(placa); // Adiciona a placa à lista "veiculos"
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Veiculo já cadastrado, ou placa inválida!");
+                Console.ResetColor();
             }
+        }
+        static bool ValidarPlaca(string placa)
+        {            
+            string pattern = @"^[A-Z]{3}\d{4}$";
+            return Regex.IsMatch(placa, pattern);
         }
 
         public void RemoverVeiculo()
