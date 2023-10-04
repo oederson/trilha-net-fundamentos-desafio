@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacionamentoTestes", "EstacionamentoTestes\EstacionamentoTestes.csproj", "{DD1D88AE-654D-4916-BD2B-35480490B59F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFundamentos", "DesafioFundamentos\DesafioFundamentos.csproj", "{67155339-15C5-4F55-ABE7-77BEEF97C235}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD1D88AE-654D-4916-BD2B-35480490B59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1D88AE-654D-4916-BD2B-35480490B59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1D88AE-654D-4916-BD2B-35480490B59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1D88AE-654D-4916-BD2B-35480490B59F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67155339-15C5-4F55-ABE7-77BEEF97C235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67155339-15C5-4F55-ABE7-77BEEF97C235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67155339-15C5-4F55-ABE7-77BEEF97C235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67155339-15C5-4F55-ABE7-77BEEF97C235}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

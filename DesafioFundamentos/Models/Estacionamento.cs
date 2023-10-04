@@ -8,7 +8,7 @@ namespace DesafioFundamentos.Models
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
 
-        public Estacionamento(decimal precoInicial, decimal precoPorHora)
+        public Estacionamento(decimal precoInicial = 0, decimal precoPorHora = 0)
         {
             this.precoInicial = precoInicial;
             this.precoPorHora = precoPorHora;
@@ -35,7 +35,7 @@ namespace DesafioFundamentos.Models
                 Console.ResetColor();
             }
         }
-        static bool ValidarPlaca(string placa)
+        public bool ValidarPlaca(string placa)
         {            
             string pattern = @"^[A-Z]{3}\d{4}$";
             return Regex.IsMatch(placa, pattern);
