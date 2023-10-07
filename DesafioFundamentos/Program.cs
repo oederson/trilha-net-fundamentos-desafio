@@ -19,4 +19,5 @@ Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
 Menu menu = new Menu(es);
 menu.ExibirMenu();
 
+
 Console.WriteLine("O programa se encerrou");

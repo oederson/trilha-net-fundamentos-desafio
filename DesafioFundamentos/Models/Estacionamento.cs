@@ -8,6 +8,11 @@ namespace DesafioFundamentos.Models
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
 
+        public Estacionamento()
+        {
+            
+        }
+
         public Estacionamento(decimal precoInicial = 0, decimal precoPorHora = 0)
         {
             this.precoInicial = precoInicial;
@@ -26,7 +31,8 @@ namespace DesafioFundamentos.Models
             bool placaAprovada = ValidarPlaca(placa) && !veiculos.Contains(placa);
             if(placaAprovada)
             {
-                veiculos.Add(placa);
+                veiculos.Add(placa);   
+                Console.WriteLine("Veiculo cadastrado com sucesso!");
             }     
             else
             {      
@@ -89,7 +95,7 @@ namespace DesafioFundamentos.Models
                 Console.WriteLine("Os veículos estacionados são:");
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
                 // *IMPLEMENTE AQUI*
-                foreach (string veiculo in veiculos)
+                foreach (var veiculo in veiculos)
                 {
                     Console.WriteLine(veiculo);
                 }
