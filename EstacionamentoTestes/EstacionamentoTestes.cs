@@ -104,15 +104,15 @@ public class EstacionamentoTestes
     public void DeveRemoverUmVeiculo()
     {
         //Arrange
-        decimal precoInicial = 10;
-        decimal precoPorHora = 10;
+        decimal precoInicial = 5;
+        decimal precoPorHora = 2;
         Estacionamento est = new Estacionamento(precoInicial, precoPorHora);
         string placa = "GHJ5678";
         string entradaSimulada = $"{placa}\n";
-        string entradaRemoverVeiculo = $"{placa}\n2\n";
+        string entradaRemoverVeiculo = $"{placa}\n4\n";
         StringWriter stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
-        string resultadoE = $"O veículo {placa} foi removido e o preço total foi de: R$ 30";
+        string resultadoE = $"O veículo {placa} foi removido e o preço total foi de: R$ 13";
         
         // Act       
         Console.SetIn(new StringReader(entradaSimulada));
